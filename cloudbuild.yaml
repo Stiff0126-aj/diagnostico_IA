@@ -1,15 +1,15 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$sprint-4-460712/diagnostico-ia-ms', '.']
+    args: ['build', '-t', 'gcr.io/sprint-4-460712/diagnostico-ia-ms', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$sprint-4-460712/diagnostico-ia-ms']
+    args: ['push', 'gcr.io/sprint-4-460712/diagnostico-ia-ms']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args: [
       'run', 'deploy', 'diagnostico-ia-ms',
-      '--image', 'gcr.io/$sprint-4-460712/diagnostico-ia-ms',
+      '--image', 'gcr.io/sprint-4-460712/diagnostico-ia-ms',
       '--region', 'us-central1',
       '--platform', 'managed',
       '--allow-unauthenticated'
