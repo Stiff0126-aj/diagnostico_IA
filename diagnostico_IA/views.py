@@ -84,3 +84,6 @@ def predecir_epilepsia(request):
     return render(request, 'diagnostico_IA/resultado.html', {
         'error': 'Método no permitido o archivo no enviado'
     })
+
+def home(request):
+    return render(request, 'Paciente/home.html')
