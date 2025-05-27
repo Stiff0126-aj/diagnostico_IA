@@ -12,7 +12,6 @@ import os
 import matplotlib.pyplot as plt
 import base64
 from io import BytesIO
-
 def formulario_diagnostico(request):
     return render(request, 'diagnostico_IA/formulario.html')
 
